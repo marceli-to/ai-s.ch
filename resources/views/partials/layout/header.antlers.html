@@ -1,0 +1,40 @@
+{{ if is_mobile }}
+  <header class="bg-white {{ if is_homepage }} h-185 {{ else }} h-112 {{ endif }} pt-54 w-full md:hidden">
+    <div class="w-[calc(100%_-_36px)] bg-white pt-18 fixed top-0">
+      <div class="flex w-full max-w-[558px]">
+        <a 
+          href="/" 
+          title="Homepage | Archiv Innenarchitektur Schweiz" 
+          class="menu-item">
+          ai-s
+        </a>
+        <a 
+          href="javascript:;" 
+          class="flex justify-center items-center h-28 w-42" 
+          x-on:click="menu = ! menu"
+          title="Menu anzeigen">
+          <template x-if="menu">
+            {{ partial:icons/cross }}
+          </template>
+          <template x-if="! menu">
+            {{ partial:icons/burger }}
+          </template>
+        </a>
+      </div>
+    </div>
+    {{ if is_homepage }}
+      <h1 class="pl-12 pt-32 text-sm leading-6">Archiv<br>Innenarchitektur<br>Schweiz</h1>
+    {{ else }}
+      <h1 class="menu-item">{{ title }}</h1>
+    {{ endif }}
+  </header>
+{{ else }}
+  <header 
+    class="hidden md:block md:pl-12 md:pt-18 xl:pt-48 min-h-28 xl:min-h-36 md:sticky md:top-0 md:bg-white border-b border-b-black">
+    {{ if is_homepage }}
+      <h1>Archiv Innenarchitektur Schweiz</h1>
+    {{ else }}
+      <h1>{{ title }}</h1>
+    {{ endif }}
+  </header>
+{{ endif }}

@@ -1,0 +1,18 @@
+<nav 
+  x-cloak 
+  x-show="menu || isMediumScreen" 
+  class="h-full w-full bg-white fixed md:max-w-[calc(25%_-_18px)] xl:max-w-[calc(25%_-_42px)] huge:max-w-[438px] top-54 md:top-18 xl:top-48 left-0 md:left-18 xl:left-36 huge:left-[calc((100%_-_1848px)_/_2)] z-50">
+  <ul class="max-w-[600px] md:max-w-none mx-auto flex flex-col gap-y-8 px-18 md:px-0">
+    {{ nav:main }}
+      {{ partial:menu/item }}
+    {{ /nav:main }}
+  </ul>
+  <ul class="max-w-[600px] md:max-w-none mx-auto flex flex-col gap-y-8 px-18 md:px-0">
+    <li>
+      <a href="mailto:{{ config.client.email }}" class="menu-item-meta">Mitglied werden</a>
+    </li>
+    <li>
+      <a href="mailto:{{ config.client.email }}" class="menu-item-meta">Newsletter abonnieren</a>
+    </li>
+  </ul>
+</nav>
