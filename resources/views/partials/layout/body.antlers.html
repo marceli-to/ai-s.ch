@@ -1,8 +1,8 @@
 <body 
-  class="antialiased text-sm xl:text-lg flex flex-col min-h-screen max-w-[600px] md:max-w-none mx-auto" 
+  class="antialiased text-black text-sm xl:text-lg flex flex-col min-h-screen max-w-[600px] md:max-w-none mx-auto" 
   x-data="{ menu: false, isMediumScreen: window.innerWidth >= 768 }"
   @resize.debounce.5ms.window="isMediumScreen = window.innerWidth >= 768">
-  <div class="mx-auto flex-1 w-full p-18 pt-0 xl:px-36">
+  <div class="mx-auto flex-1 w-full px-18 xl:px-36">
     {{ slot }}
   </div>
 </body>

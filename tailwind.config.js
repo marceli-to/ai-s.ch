@@ -14,6 +14,10 @@ export default {
   theme: {
     extend: {
 
+      boxShadow: {
+        'header': '0px 8px 12px -16px rgba(0,0,0,0.75)',
+      },
+
       screens: {
         'xs': '414px',
         'huge': '1920px'
@@ -32,7 +36,6 @@ export default {
       },
 
       fontSize: {
-        // xxs = 12px
         'xxs': '0.75rem', // 12px
         'xs': '0.875rem',  // 14px
         'sm': '1.0625rem', // 17px
@@ -44,7 +47,9 @@ export default {
 
       colors: {
         'lemon': '#fff132',
-        'ruby': '#ff0000'
+        'ruby': '#ff0000',
+        'silver': '#ebebeb',
+        'graphite': '#666666',
       },
     },
 

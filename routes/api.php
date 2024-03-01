@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,3 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::post('/form/newsletter', [FormController::class, 'storeSubscriber']);
+Route::post('/form/member', [FormController::class, 'storeMember']);
