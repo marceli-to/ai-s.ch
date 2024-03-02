@@ -5,7 +5,7 @@
     :value="modelValue"
     :placeholder="placeholder"
     @input="updateInput"
-    :class="[$props.error ? 'bg-ruby text-white placeholder:text-white' : 'bg-silver', 'outline-none text-xs md:text-sm !border-0 ring-0 focus:ring-0 py-4 leading-none px-8 w-full placeholder:leading-none placeholder:text-graphite']"
+    :class="[$props.error ? 'placeholder:text-ruby' : '', 'bg-silver outline-none text-xs xl:text-sm ring-0 focus:ring-0 py-4 leading-none px-8 w-full placeholder:leading-none placeholder:text-graphite']"
   />
 </template>
 <script>

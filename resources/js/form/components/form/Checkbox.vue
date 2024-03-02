@@ -1,20 +1,17 @@
 <template>
-  <div class="relative">
-    <label :for="id" class="break-words block hyphens-auto cursor-pointer flex w-full">
+  <div class="relative min-h-28 xl:min-h-32 w-full border-b border-black flex justify-start items-center leading-none pl-12">
+    <label :for="id" class="text-xs xl:text-sm break-words hyphens-auto cursor-pointer flex items-center w-full">
       <input
         :id="id"
-        type="checkbox"
+        type="radio"
         :value="modelValue"
         :placeholder="placeholder"
+        :checked="$props.selected ? true : false"
         @input="updateInput"
         class="opacity-0 absolute cursor-pointer h-0 w-0"
       />
-      <span class="bg-cloud-mist w-30 h-30 md:w-40 md:h-40 xl:w-50 xl:h-50 mr-15 md:mr-20 xl:mr-30 flex items-center justify-center flex-shrink-0">
-        <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden text-midnight w-22 md:w-28 xl:w-36 h-auto">
-          <path d="M22.92 4.304L19.157 0.541003L8.668 11.03L3.922 6.284L0.158997 10.047L8.66699 18.555L22.92 4.304Z" fill="currentColor"/>
-        </svg>
-      </span>
-      <div class="-mt-2 xl:-mt-4">
+      <span class="block size-12 xl:size-16 rounded-full border-black border bg-white"></span>
+      <div class="ml-8 xl:ml-12">
         <slot name="label"></slot>
       </div>
     </label>
@@ -45,18 +42,17 @@ export default {
       type: String,
       default: "",
     },
-  },
 
-  methods: {
-    updateInput(event) {
-      this.$emit("update:modelValue", event.target.value);
-    }
-  }
+    selected: {
+      type: Boolean,
+      default: false,
+    },
+  },
 }
 </script>
 
 <style scoped>
-input[type="checkbox"]:checked ~ span svg {
-  @apply block
+input[type="radio"]:checked ~ span {
+  @apply bg-lemon
 }
 </style>

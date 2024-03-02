@@ -20,6 +20,9 @@ export default {
 
       screens: {
         'xs': '414px',
+        'md': '960px',
+        'lg': '1280px',
+        'xl': '1440px',
         'huge': '1920px'
       },
 

@@ -24,8 +24,9 @@ class MemberStoreRequest extends FormRequest
   public function rules()
   {
     return [
-      'firstname' => 'required',
-      'name' => 'required',
+      'firstname' => 'required_if:member_type,Student:in,Einzelmitglied',
+      'name' => 'required_if:member_type,Student:in,Einzelmitglied',
+      'institution' => 'required_if:member_type,Institution',
       'email' => 'required|email',
     ];
   }
@@ -39,8 +40,9 @@ class MemberStoreRequest extends FormRequest
   public function messages()
   {
     return [
-      'firstname.required' => 'Vorname fehlt',
-      'name.required' => 'Name fehlt',
+      'firstname.required_if' => 'Vorname fehlt',
+      'name.required_if' => 'Name fehlt',
+      'institution.required_if' => 'Institution fehlt',
       'email.required' => 'E-Mail fehlt',
       'email.email' => 'E-Mail ungültig',
     ];

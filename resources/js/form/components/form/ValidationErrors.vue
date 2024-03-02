@@ -1,5 +1,5 @@
 <template>
-  <h2 class="mt-18 xl:mt-24 text-xs md:text-sm text-ruby leading-6">Es sind Fehler aufgetreten, bitte überprüfen Sie ihre Angaben:</h2>
+  <h2 class="text-xs xl:text-sm text-ruby leading-5 xl:leading-6">Es sind Fehler aufgetreten, bitte überprüfen Sie ihre Angaben:</h2>
 </template>
 <script>
 export default {

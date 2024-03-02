@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-91998de1.css",
+    "file": "assets/app-2f3c0ab2.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -9,8 +9,15 @@
     "isEntry": true,
     "src": "resources/js/app.js"
   },
+  "resources/js/form/forms.css": {
+    "file": "assets/forms-490dbba8.css",
+    "src": "resources/js/form/forms.css"
+  },
   "resources/js/form/forms.js": {
-    "file": "assets/forms-56e84354.js",
+    "css": [
+      "assets/forms-490dbba8.css"
+    ],
+    "file": "assets/forms-8a2854cf.js",
     "isEntry": true,
     "src": "resources/js/form/forms.js"
   }

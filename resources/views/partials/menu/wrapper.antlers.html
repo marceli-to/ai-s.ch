@@ -1,21 +1,15 @@
 <nav 
   x-cloak 
   x-show="menu || isMediumScreen" 
-  class="h-[calc(100%_-_72px)] md:h-[calc(100%_-_42px)] xl:h-[calc(100%_-_96px)] w-full bg-white  fixed md:max-w-[calc(25%_-_18px)] xl:max-w-[calc(25%_-_42px)] huge:max-w-[438px] top-54 md:top-18 xl:top-48 left-0 md:left-18 xl:left-36 huge:left-[calc((100%_-_1848px)_/_2)] z-50">
+  class="h-[calc(100%_-_72px)] md:h-[calc(100%_-_42px)] xl:h-[calc(100%_-_96px)] w-full bg-white overflow-y-auto fixed md:max-w-[calc(25%_-_18px)] xl:max-w-[calc(25%_-_42px)] huge:max-w-[438px] top-54 md:top-18 xl:top-48 left-0 md:left-18 xl:left-36 huge:left-[calc((100%_-_1848px)_/_2)] z-50">
   <div class="h-full w-full max-w-[600px] md:max-w-none mx-auto flex flex-col justify-between">
-    <ul class="flex flex-col gap-y-8 px-18 md:px-0 md:mr-32 2xl:mr-56">
+    <ul class="flex flex-col gap-y-8 px-18 md:px-0 md:mr-32 xl:mr-56">
       {{ nav:main }}
         {{ partial:menu/item }}
       {{ /nav:main }}
     </ul>
-    <div id="forms">
+    <div id="forms" class="pt-8">
     </div>
-    {{# <ul class="flex flex-col px-18 md:px-0 md:mr-32 2xl:mr-56">
-      <li class="flex flex-col justify-center" id="form-member">
-      </li>
-      <li class="flex flex-col justify-center" id="form-newsletter">
-      </li>
-    </ul> #}}
   </div>
 </nav>
 {{ vite src="resources/js/form/forms.js" }}
