@@ -29,12 +29,11 @@
     {{ endif }}
   </header>
 {{ else }}
-  <header 
-    class="hidden md:block md:pl-12 md:pt-18 xl:pt-48 min-h-28 xl:min-h-36 md:sticky md:top-0 md:bg-white border-b border-b-black">
+  {{ partial:components/header class="hidden md:block" }}
     {{ if is_homepage }}
-      <h1>Archiv Innenarchitektur Schweiz</h1>
-    {{ else }}
-      <h1>{{ title }}</h1>
-    {{ endif }}
-  </header>
+        <h1>Archiv Innenarchitektur Schweiz</h1>
+      {{ else }}
+        <h1>{{ title }}</h1>
+      {{ endif }}
+  {{ /partial:components/header }}
 {{ endif }}

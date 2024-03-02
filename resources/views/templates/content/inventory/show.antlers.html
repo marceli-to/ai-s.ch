@@ -1,0 +1,52 @@
+<script>
+  // Get the URL hash
+  var hash = window.location.hash;
+  // Set the active section based on the URL hash
+  if (hash === '#portrait' || hash === '') {
+    active = 'portrait';
+  } else if (hash === '#arbeiten') {
+    active = 'arbeiten';
+  } else if (hash === '#video') {
+    active = 'video';
+  }
+</script>
+<div x-data="{ active: active}">
+  {{ partial:components/header }}
+    <nav>
+
+      <ul class="grid grid-cols-12">
+        <li class="col-span-4">
+          <a 
+            href="{{ url }}#portrait"
+            x-on:click="active = 'portrait'">
+            Portrait
+          </a>
+        </li>
+        <li class="col-span-4 flex justify-center">
+          <a 
+            href="{{ url }}#arbeiten"
+            x-on:click="active = 'arbeiten'">
+            Arbeiten
+          </a>
+        </li>
+        <li class="col-span-4 flex justify-end pr-12">
+          <a 
+            href="{{ url }}#video"
+            x-on:click="active = 'video'">
+            [v]
+          </a>
+        </li>
+      </ul>
+    </nav>
+  {{ /partial:components/header }}
+
+  <div id="portrait" class="bg-yellow-200 min-h-200" x-show="active == 'portrait'">
+  <h1>Portrait</h1>
+  </div>
+  <div id="arbeiten" class="bg-red-200 min-h-200" x-show="active == 'arbeiten'">
+    <h1>Arbeiten</h1>
+  </div>
+  <div id="video" class="bg-green-200 min-h-200" x-show="active == 'video'">
+    <h1>Video</h1>
+  </div>
+</div>

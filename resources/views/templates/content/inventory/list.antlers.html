@@ -1,0 +1,28 @@
+{{ name_index = '' }}
+{{ previous_index = '' }}
+<div class="border-t border-black mt-54 xl:mt-92">
+  {{ collection:inventory sort="name" }} 
+    {{ name_index = name | substr(0, 1) }}
+    <div class="border-b border-black pl-12 min-h-34 xl:min-h-40 leading-none flex items-center">
+      <div class="w-24 xl:w-32">
+        {{ if name_index != previous_index }}
+          {{ name_index }}
+          {{ previous_index = name_index }}
+        {{ /if }}
+      </div>
+      <div class="{{ !active ? 'text-ash' : '' }}">
+        {{ if active }}
+        <a 
+          href="{{ url }}" 
+          title="{{ title }}"
+          class="hover:text-ruby transition-colors">
+          {{ title }}
+        </a>
+        {{ else }}
+          {{ title }}
+        {{ /if }}
+      </div>
+    </div>
+  {{ /collection:inventory }}
+</div>
+

@@ -53,6 +53,7 @@ export default {
         'ruby': '#ff0000',
         'silver': '#ebebeb',
         'graphite': '#666666',
+        'ash': '#b3b3b3',
       },
     },
 
