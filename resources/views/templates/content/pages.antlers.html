@@ -1,14 +1,2 @@
-{{ nav:main }}
-{{ if is_current || is_parent }}
-  {{ if children }}
-    {{ partial:components/header }}
-      {{ partial:menu/page/wrapper }}
-    {{ /partial:components/header }}
-    {{ /if }}
-  {{ /if }}
-{{ /nav:main }}
-
+{{ partial:menu/page/wrapper }}
 {{ partial:layout/content }}
-
-
-

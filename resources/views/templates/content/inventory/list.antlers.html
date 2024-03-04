@@ -1,16 +1,16 @@
 {{ name_index = '' }}
 {{ previous_index = '' }}
-<div class="border-t border-black mt-54 xl:mt-92">
+<div class="border-t border-black mt-52 xl:mt-90">
   {{ collection:inventory sort="name" }} 
     {{ name_index = name | substr(0, 1) }}
-    <div class="border-b border-black pl-12 min-h-34 xl:min-h-40 leading-none flex items-center">
+    <div class="border-b border-black pl-12 min-h-36 xl:min-h-44 leading-none flex justify-between items-center">
       <div class="w-24 xl:w-32">
         {{ if name_index != previous_index }}
           {{ name_index }}
           {{ previous_index = name_index }}
         {{ /if }}
       </div>
-      <div class="{{ !active ? 'text-ash' : '' }}">
+      <div class="{{ !active ? 'text-ash' : '' }} flex-1">
         {{ if active }}
         <a 
           href="{{ url }}" 
@@ -21,6 +21,15 @@
         {{ else }}
           {{ title }}
         {{ /if }}
+      </div>
+      <div class="w-24">
+        {{ if video_text || video_media }}
+          <a 
+            href="{{ url }}#video" 
+            title="Video">
+            {{ partial:icons/video class="w-24 h-24" }}
+          </a>
+      {{ /if }}
       </div>
     </div>
   {{ /collection:inventory }}

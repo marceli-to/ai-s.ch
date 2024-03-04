@@ -1,0 +1,15 @@
+<div class="min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-12">
+  {{ title }}
+</div>
+<div class="min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-12">
+  {{ event_date | iso_format('dddd, DD.MM.YYYY') }}
+</div>
+<div class="min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-12">
+  {{ if (event_time_start && event_time_end) }}
+    {{ event_time_start | format('H.i') }}-{{ event_time_end | format('H.i') }} Uhr
+  {{ elseif (event_time_start && !event_time_end) }}
+    ab {{ event_time_start | format('H.i') }} Uhr
+  {{ elseif (!event_time_start && event_time_end) }}
+    bis {{ event_time_end | format('H.i') }} Uhr
+  {{ /if}}
+</div>
