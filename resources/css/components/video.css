@@ -1,0 +1,7 @@
+.video-wrapper {
+  @apply relative aspect-video;
+}
+
+.video-wrapper iframe {
+  @apply w-full h-full object-contain
+}

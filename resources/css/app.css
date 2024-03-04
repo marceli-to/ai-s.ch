@@ -4,6 +4,8 @@
 
 @import "menu/item.css";
 /* @import "typo/webfonts.css"; */
+@import "components/headings.css";
+@import "components/video.css";
 @import "utils.css";
 
 * {
@@ -18,5 +20,34 @@ html {
 }
 
 body {
+}
+
+article.content h1,
+article.content h2 {
+  @apply mb-16 xl:mb-24
+}
+
+article.content p {
+  @apply mb-16 xl:mb-24
+}
+
+article.content a {
+  @apply text-ruby no-underline hover:underline underline-offset-2 decoration-1
+}
+
+.span-3 {
+  @apply col-span-3
+}
+
+.span-4 {
+  @apply col-span-4
+}
+
+.span-5 {
+  @apply col-span-5
+}
+
+.span-6 {
+  @apply col-span-6
 }
 

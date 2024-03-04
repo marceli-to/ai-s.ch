@@ -1,5 +1,5 @@
-<figure>
-  <picture>
+<figure class="mb-36 md:mb-72 xl:mb-128 last-of-type:mb-0">
+  <picture class="block md:px-12 lg:px-36 xl:px-48 ">
     <source media="(min-width: 1280px)" srcset="{{ glide:image preset='2xl-webp' }}" type="image/webp">
     <source media="(min-width: 1024px)" srcset="{{ glide:image preset='xl-webp' }}" type="image/webp">
     <source media="(min-width: 768px)" srcset="{{ glide:image preset='lg-webp' }}" type="image/webp">
@@ -16,12 +16,7 @@
       class="block w-full h-auto {{ imageClass ?? '' }}"
       loading="lazy">
   </picture>
-  <figcaption class="text-tiny sm:text-xxs md:text-xs mt-5 lg:mt-10 flex gap-x-10 lg:gap-x-15">
-    {{ if count }}
-      <div>1 | {{ count }}</div>
-    {{ /if }}
-    {{ if image:alt }}
-      <div>{{ image:alt }}</div>
-    {{ /if }}
+  <figcaption class="md:max-w-[50%] w-full md:ml-auto pt-8 xl:pt-12 text-xxs xl:text-md">
+    {{ caption }}
   </figcaption>
 </figure>

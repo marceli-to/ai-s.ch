@@ -45,11 +45,11 @@ tabs:
               replicator_preview: true
               hide_display: false
   biography:
-    display: Bio
+    display: Biografie
     sections:
       -
         display: Biografie
-        instructions: 'Biografie (Text, Medien) hinzufügen'
+        instructions: 'Text, Medien hinzufügen'
         fields:
           -
             handle: bio_text
@@ -104,6 +104,144 @@ tabs:
                       fields:
                         -
                           import: image
+              type: replicator
+              display: Medien
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  work:
+    display: Arbeiten
+    sections:
+      -
+        display: Arbeiten
+        instructions: 'Text, Medien hinzufügen'
+        fields:
+          -
+            handle: work_text
+            field:
+              buttons:
+                - h2
+                - bold
+                - unorderedlist
+                - removeformat
+                - anchor
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: Text
+              icon: bard
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: work_media
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                neue_set-gruppe:
+                  display: 'Neue Set-Gruppe'
+                  instructions: null
+                  icon: null
+                  sets:
+                    image:
+                      display: Bild
+                      instructions: null
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image
+              type: replicator
+              display: Medien
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  video:
+    display: Video
+    sections:
+      -
+        display: Video
+        instructions: 'Text/Video hinzufügen'
+        fields:
+          -
+            handle: video_text
+            field:
+              buttons:
+                - h2
+                - bold
+                - unorderedlist
+                - removeformat
+                - anchor
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: Text
+              icon: bard
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: video_media
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                video:
+                  display: Video
+                  instructions: null
+                  icon: null
+                  sets:
+                    video:
+                      display: Video
+                      instructions: null
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          import: video
               type: replicator
               display: Medien
               icon: replicator

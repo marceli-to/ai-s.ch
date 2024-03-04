@@ -1,0 +1,17 @@
+title: Video
+fields:
+  -
+    handle: code
+    field:
+      antlers: false
+      type: textarea
+      display: Code
+      icon: textarea
+      instructions: 'Youtube-Code hinzufügen'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required

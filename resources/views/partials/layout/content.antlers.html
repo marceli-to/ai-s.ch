@@ -1,0 +1,14 @@
+<section class="pt-32 md:pt-52 xl:pt-44 md:grid md:grid-cols-12 md:gap-24">
+  <article class="content md:col-span-6">
+    <div class="px-12">
+      {{ page_elements }}
+        {{ partial:components/elements }}
+      {{ /page_elements }}
+    </div>
+  </article>
+  <article class="md:col-span-6">
+    {{ media }}
+      {{ partial:media/image }}
+    {{ /media }}
+  </article>
+</section>

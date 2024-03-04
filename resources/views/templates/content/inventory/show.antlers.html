@@ -1,52 +1,86 @@
 <script>
-  // Get the URL hash
-  var hash = window.location.hash;
-  // Set the active section based on the URL hash
-  if (hash === '#portrait' || hash === '') {
-    active = 'portrait';
-  } else if (hash === '#arbeiten') {
-    active = 'arbeiten';
-  } else if (hash === '#video') {
-    active = 'video';
-  }
+  const active = window.location.hash === '#video' ? 'video' : window.location.hash === '#arbeiten' ? 'work' : 'bio';
 </script>
-<div x-data="{ active: active}">
+<div x-data="{ active: active }">
   {{ partial:components/header }}
-    <nav>
-
-      <ul class="grid grid-cols-12">
-        <li class="col-span-4">
-          <a 
-            href="{{ url }}#portrait"
-            x-on:click="active = 'portrait'">
-            Portrait
+    {{ partial:menu/page/wrapper }}
+        <li class="col-span-12 md:col-span-4 flex justify-between items-center">
+          {{ if bio_text || bio_media }}
+            <a 
+              href="{{ url }}#biografie"
+              x-on:click="window.scrollTo(0,0); active = 'bio'"
+              :class="{ 'text-ash': active !== 'bio' }"
+              title="Biografie">
+              Biografie
+            </a>
+          {{ /if }}
+          {{ if work_text || work_media }}
+            <a 
+              href="{{ url }}#arbeiten"
+              x-on:click="window.scrollTo(0,0); active = 'work'"
+              :class="{ 'text-ash': active !== 'work' }"
+              title="Arbeiten">
+              Arbeiten
+            </a>
+          {{ /if }}
+          {{ if video_text || video_media }}
+            <a 
+              href="{{ url }}#video" 
+              x-on:click="window.scrollTo(0,0); active = 'video'"
+              :class="{'text-ash': active !== 'video', 'block pr-12 md:pr-0': true}"
+              title="Video">
+              {{ partial:icons/video class="w-24 h-24" }}
+            </a>
+          {{ /if }}
+        </li>
+        <li class="hidden md:col-span-8 md:flex justify-end pr-12">
+          <a href="/einblicke-bestaende" title="Einblicke Bestände" class="uppercase text-ash">
+            A-Z
           </a>
         </li>
-        <li class="col-span-4 flex justify-center">
-          <a 
-            href="{{ url }}#arbeiten"
-            x-on:click="active = 'arbeiten'">
-            Arbeiten
-          </a>
-        </li>
-        <li class="col-span-4 flex justify-end pr-12">
-          <a 
-            href="{{ url }}#video"
-            x-on:click="active = 'video'">
-            [v]
-          </a>
-        </li>
-      </ul>
-    </nav>
+    {{ /partial:menu/page/wrapper }}
   {{ /partial:components/header }}
 
-  <div id="portrait" class="bg-yellow-200 min-h-200" x-show="active == 'portrait'">
-  <h1>Portrait</h1>
-  </div>
-  <div id="arbeiten" class="bg-red-200 min-h-200" x-show="active == 'arbeiten'">
-    <h1>Arbeiten</h1>
-  </div>
-  <div id="video" class="bg-green-200 min-h-200" x-show="active == 'video'">
-    <h1>Video</h1>
-  </div>
+  <article class="pt-32 md:pt-52 xl:pt-44 md:grid md:grid-cols-12 md:gap-24" x-show="active == 'bio'">
+    <div class="px-12 md:col-span-4">
+      <h1>{{ title }}</h1>
+      <div class="mt-4 md:mt-24 xl:mt-52">
+        {{ bio_text }}
+      </div>
+    </div>
+    <div class="md:col-span-8 mt-32 md:mt-0">
+      {{ bio_media }}
+        {{ partial:media/image }}
+      {{ /bio_media }}
+    </div>
+  </article>
+
+  <article class="pt-32 md:pt-52 xl:pt-44 md:grid md:grid-cols-12 md:gap-24" x-show="active == 'work'">
+    <div class="px-12 md:col-span-4">
+      <h1>{{ title }}</h1>
+      <div class="mt-4 md:mt-24 xl:mt-52">
+        {{ work_text }}
+      </div>
+    </div>
+    <div class="md:col-span-8 mt-32 md:mt-0">
+      {{ work_media }}
+        {{ partial:media/image }}
+      {{ /work_media }}
+    </div>
+  </article>
+
+  <article class="pt-32 md:pt-52 xl:pt-44 md:grid md:grid-cols-12 md:gap-24" x-show="active == 'video'">
+    <div class="px-12 md:col-span-4">
+      <h1>{{ title }}</h1>
+      <div class="mt-24 xl:mt-52">
+        {{ video_text }}
+      </div>
+    </div>
+    <div class="md:col-span-8 mt-32 md:mt-0">
+      {{ video_media }}
+        {{ partial:media/video }}
+      {{ /video_media }}
+    </div>
+  </article>
+
 </div>

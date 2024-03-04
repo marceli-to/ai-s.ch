@@ -1,0 +1,36 @@
+title: Medien
+fields:
+  -
+    handle: media
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          instructions: null
+          icon: null
+          sets:
+            image:
+              display: Bild
+              instructions: null
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: image
+            video:
+              display: Video
+              instructions: null
+              icon: media-webcam-video
+              fields:
+                -
+                  import: video
+      type: replicator
+      display: Medien
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

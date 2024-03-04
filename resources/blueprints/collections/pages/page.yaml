@@ -28,16 +28,18 @@ tabs:
               previews: true
               fullscreen: true
               sets:
-                neue_set-gruppe:
-                  display: 'Neue Set-Gruppe'
+                content:
+                  display: Inhalte
                   instructions: null
                   icon: null
                   sets:
-                    neues_set:
-                      display: 'Neues Set'
+                    editor:
+                      display: Editor
                       instructions: null
-                      icon: null
-                      fields: {  }
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: editor
               type: replicator
               display: Inhalte
               icon: replicator
@@ -46,6 +48,15 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+  media:
+    display: Medien
+    sections:
+      -
+        display: Medien
+        instructions: 'Bilder / Videos hinzufügen'
+        fields:
+          -
+            import: media
   seo:
     display: SEO
     sections:
