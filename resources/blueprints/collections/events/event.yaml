@@ -38,8 +38,6 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-              validate:
-                - required
           -
             handle: event_time_end
             field:

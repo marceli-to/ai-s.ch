@@ -3,7 +3,7 @@
 <div class="border-t border-black mt-52 xl:mt-90">
   {{ collection:inventory sort="name" }} 
     {{ name_index = name | substr(0, 1) }}
-    <div class="border-b border-black pl-12 min-h-36 xl:min-h-44 leading-none flex justify-between items-center">
+    <div class="border-b border-black pl-8 md:pl-12 min-h-36 xl:min-h-44 leading-none flex justify-between items-center">
       <div class="w-24 xl:w-32">
         {{ if name_index != previous_index }}
           {{ name_index }}

@@ -27,7 +27,7 @@ article.content h2 {
   @apply mb-16 xl:mb-24
 }
 
-article.content p {
+article.content p:not(:last-of-type) {
   @apply mb-16 xl:mb-24
 }
 

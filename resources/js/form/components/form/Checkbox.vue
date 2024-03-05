@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-28 xl:min-h-32 w-full border-b border-black flex justify-start items-center leading-none pl-12">
+  <div class="relative min-h-28 xl:min-h-32 w-full border-b border-black flex justify-start items-center leading-none pl-8 md:pl-12">
     <label :for="id" class="text-xs xl:text-sm break-words hyphens-auto cursor-pointer flex items-center w-full">
       <input
         :id="id"
