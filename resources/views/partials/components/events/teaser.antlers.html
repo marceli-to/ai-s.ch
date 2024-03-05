@@ -2,11 +2,11 @@
 {{ collection:events as="event" query_scope="next_event" }}
   {{ if event }}
     {{ event }}
-      <div class="border border-b border-black bg-white absolute left-0 top-[calc(75vh_/_2)] -translate-y-[100%]">
+      <div class="text-sm xl:text-2xl border border-b border-black bg-white absolute left-0 top-[calc(75vh_/_2)] -translate-y-[100%]">
         <h2 class="m-0 border-b border-black pt-6 xl:pt-8 pb-3 xl:pb-4 px-8 xl:px-10">Nächste Veranstaltung</h2>
         <div class="flex p-10">
           <div>&rightarrow;</div>
-          <div class="pl-6 pr-10 xl:pl-8 xl:pr-16 leading-[1.3]">
+          <div class="pl-6 pr-10 xl:pl-8 xl:pr-16 leading-[1.2]">
             {{ title }}<br>
             {{ if (event_time_start && event_time_end) }}
               {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ event_time_start | format('H.i') }}&ndash;{{ event_time_end | format('H.i') }} Uhr
