@@ -40,6 +40,13 @@ tabs:
                       fields:
                         -
                           import: editor
+                    teasers:
+                      display: Teasers
+                      instructions: null
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          import: teasers
               type: replicator
               display: Inhalte
               icon: replicator

@@ -1,0 +1,58 @@
+title: Teasers
+fields:
+  -
+    handle: col_left
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        teaser:
+          display: Teaser
+          instructions: null
+          icon: null
+          sets:
+            teaser:
+              display: Teaser
+              instructions: null
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: teaser
+      type: replicator
+      display: 'Linke Spalte'
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: col_right
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        teaser:
+          display: Teaser
+          instructions: null
+          icon: null
+          sets:
+            teaser:
+              display: Teaser
+              instructions: null
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: teaser
+      type: replicator
+      display: 'Rechte Spalte'
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50

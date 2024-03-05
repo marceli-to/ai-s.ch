@@ -1,0 +1,14 @@
+{{ if uri }}
+  <a 
+    {{ if uri_segment }}
+      href="{{ uri }}#{{ uri_segment }}" 
+    {{ else }}
+      href="{{ uri }}" 
+    {{ /if }}
+    title="{{ caption }}" 
+    class="hover:text-ruby group">
+    {{ partial:media/image }}
+  </a>
+{{ else }}
+  {{ partial:media/image }}
+{{ /if }}

@@ -1,0 +1,71 @@
+title: Teaser
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      min_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Bild
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: caption
+    field:
+      antlers: false
+      type: textarea
+      display: Legende
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: uri
+    field:
+      collections:
+        - inventory
+        - pages
+      type: link
+      display: Link
+      icon: link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: uri_segment
+    field:
+      options:
+        biografie: Biografie
+        arbeiten: Arbeiten
+        video: Video
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: true
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Link segment'
+      icon: select
+      instructions: 'Unterseite Bestand definieren (Biografie, Arbeiten, Video)'
+      listable: hidden
+      instructions_position: below
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
