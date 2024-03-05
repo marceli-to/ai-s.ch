@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import "menu/item.css";
-/* @import "typo/webfonts.css"; */
+@import "typo/webfonts.css";
 @import "components/headings.css";
 @import "components/video.css";
 @import "utils.css";

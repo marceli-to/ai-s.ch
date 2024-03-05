@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'GreyLLWeb-Book';
+  src: url('fonts/GreyLLWeb-Book.woff2') format('woff2'), url('fonts/GreyLLWeb-Book.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,8 +1,16 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-275b9e0b.css",
+    "file": "assets/app-48c4225c.css",
     "isEntry": true,
     "src": "resources/css/app.css"
+  },
+  "resources/css/fonts/GreyLLWeb-Book.woff": {
+    "file": "assets/GreyLLWeb-Book-ae202cd1.woff",
+    "src": "resources/css/fonts/GreyLLWeb-Book.woff"
+  },
+  "resources/css/fonts/GreyLLWeb-Book.woff2": {
+    "file": "assets/GreyLLWeb-Book-ed59f7aa.woff2",
+    "src": "resources/css/fonts/GreyLLWeb-Book.woff2"
   },
   "resources/js/app.js": {
     "file": "assets/app-154cb3de.js",

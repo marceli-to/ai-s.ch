@@ -35,7 +35,7 @@ export default {
       },
 
       fontFamily: {
-        'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans']
+        'grey-book': ['GreyLLWeb-Book', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans']
       },
 
       fontSize: {
