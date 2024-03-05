@@ -2,7 +2,7 @@
 {{ collection:events as="event" query_scope="next_event" }}
   {{ if event }}
     {{ event }}
-      <div class="text-sm xl:text-2xl border border-b border-black bg-white absolute left-0 top-[calc(75vh_/_2)] -translate-y-[100%]">
+      <div class="hidden md:block text-sm xl:text-2xl border border-b border-black bg-white absolute left-0 top-[calc(75vh_/_2)] -translate-y-[100%]">
         <h2 class="m-0 border-b border-black pt-6 xl:pt-8 pb-3 xl:pb-4 px-8 xl:px-10">Nächste Veranstaltung</h2>
         <div class="flex p-10">
           <div>&rightarrow;</div>
