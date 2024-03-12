@@ -98,7 +98,7 @@
             </form-input>
             <form-group class="flex justify-end w-full">
               <button 
-                :class="[isLoading ? 'bg-silver pointer-events-none select-none' : '', 'bg-lemon text-xs xl:text-sm text-black py-6 px-10 leading-none inline-flex items-center w-auto text-left']"
+                :class="[isLoading ? 'bg-silver pointer-events-none select-none' : '', 'bg-lemon text-sm xl:text-md text-black py-6 px-10 leading-none inline-flex items-center w-auto text-left']"
                 type="button"
                 @click.prevent="submit('member')">
                 absenden
@@ -108,6 +108,7 @@
         </form>
       </template>
     </li>
+    <!-- 
     <li class="flex flex-col justify-center">
       <a 
         href="javascript:;" 
@@ -159,6 +160,7 @@
         </form>
       </template>
     </li>
+    -->
   </ul>
 </template>
 <script>
