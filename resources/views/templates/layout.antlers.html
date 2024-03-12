@@ -8,7 +8,7 @@
 {{ if  open_graph_description }}<meta name="description" content="{{ open_graph_description }}">{{ else }}<meta name="description" content="{{ config.client.meta_description }}">{{ /if}}
 {{ if is_homepage }}<meta property="og:title" content="Archiv Innenarchitektur Schweiz">{{ else }}<meta property="og:title" content="{{ open_graph_title ?? title ?? site:name }} | Archiv Innenarchitektur Schweiz">{{ endif }}
 {{ if  open_graph_description }}<meta name="og:description" content="{{ open_graph_description }}">{{ else }}<meta property="og:description" content="{{ config.client.meta_description }}">{{ /if }}
-{{ if open_graph_image }}<meta property="og:image" content="{{ config.client.base_url }}{{ open_graph_image:url }}"> {{ else }}<meta property="og:image" content="{{ config.client.base_url }}/opengraph.jpg">{{ /if }}
+{{# {{ if open_graph_image }}<meta property="og:image" content="{{ config.client.base_url }}{{ open_graph_image:url }}"> {{ else }}<meta property="og:image" content="{{ config.client.base_url }}/opengraph.jpg">{{ /if }} #}}
 <meta property="og:url" content="{{ current_url }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
@@ -26,7 +26,7 @@
 {{ vite src="resources/css/app.css" }}
 {{ vite src="resources/js/app.js" }}
 </head>
-{{ partial:layout/breakpoints }}
+{{# {{ partial:layout/breakpoints }} #}}
 {{ partial:layout/body }}
   {{ partial:layout/header is_mobile="true" }}
   {{ partial:layout/main }}
