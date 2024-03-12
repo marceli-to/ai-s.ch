@@ -39,13 +39,10 @@ export default {
       },
 
       fontSize: {
-        'xxs': '0.75rem', // 12px
-        'xs': '0.875rem',  // 14px
-        'sm': '1.0625rem', // 17px
+        'sm': '0.9375rem', // 15px
         'md': '1.125rem', // 18px
         'lg': '1.3125rem', // 21px
         'xl': '1.5rem', // 24px
-        '2xl': '1.75rem', // 28px
       },
 
       colors: {

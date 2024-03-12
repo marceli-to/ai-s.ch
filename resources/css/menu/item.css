@@ -1,3 +1,3 @@
 .menu-item {
-  @apply min-h-28 xl:min-h-36 w-full flex justify-start items-center text-sm xl:text-2xl leading-none pl-8 md:pl-12;
+  @apply min-h-28 xl:min-h-36 w-full flex justify-start items-center text-md md:text-lg xl:text-xl leading-none pl-8 md:pl-12;
 }

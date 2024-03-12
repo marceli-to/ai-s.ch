@@ -9,9 +9,11 @@
 {{ if type == 'teasers' }}
 <div class="md:grid md:grid-cols-12 md:gap-6 xl:gap-24 md:mt-24 xl:mt-48">
   <div class="mb-48 md:mb-0 md:col-span-6 flex flex-col gap-y-48 md:gap-y-72 xl:gap-y-128 relative z-0">
-    {{ partial:components/events/teaser }}
     {{ col_left }}
-      {{ partial:components/teaser }}
+    {{ if index == 1 }}
+      {{ partial:components/events/teaser }}
+    {{ /if }}
+    {{ partial:components/teaser }}
     {{ /col_left }}
   </div>
   <div class="md:col-span-6 flex flex-col gap-y-48 md:gap-y-72 xl:gap-y-128 relative z-0">
