@@ -18,7 +18,7 @@ export default defineConfig({
       input: [
         'resources/css/app.css',
         'resources/js/app.js',
-        'resources/js/form/forms.js',
+        // 'resources/js/form/forms.js',
       ],
       refresh: true,
     }),
