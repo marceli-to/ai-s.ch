@@ -27,12 +27,21 @@ article.content h2 {
   @apply mb-16 xl:mb-24
 }
 
-article.content p:not(:last-of-type) {
+article.content p:not(:last-of-type),
+article.content ul {
   @apply mb-16 xl:mb-24
 }
 
 article.content a {
   @apply text-ruby no-underline hover:underline underline-offset-2 decoration-1
+}
+
+article.content ul {
+  @apply list-disc list-inside ml-4
+}
+
+article.content ul li p {
+  @apply inline
 }
 
 .span-3 {

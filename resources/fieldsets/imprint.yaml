@@ -1,14 +1,10 @@
-title: Editor
+title: Impressum
 fields:
   -
-    handle: content
+    handle: text
     field:
       buttons:
-        - h1
-        - h2
-        - h3
         - bold
-        - italic
         - unorderedlist
         - removeformat
         - anchor
@@ -22,7 +18,7 @@ fields:
       allow_source: true
       enable_input_rules: true
       enable_paste_rules: true
-      remove_empty_nodes: false
+      remove_empty_nodes: true
       antlers: false
       link_noopener: false
       link_noreferrer: false
@@ -31,24 +27,10 @@ fields:
       collapse: false
       previews: true
       type: bard
-      display: Content
+      display: Text
       icon: bard
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
-      container: assets
-      sets:
-        elements:
-          display: Elemente
-          instructions: null
-          icon: favorite-star
-          sets:
-            imprint:
-              display: Impressum
-              instructions: null
-              icon: null
-              fields:
-                -
-                  import: imprint
