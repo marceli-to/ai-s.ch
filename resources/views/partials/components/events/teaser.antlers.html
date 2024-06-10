@@ -2,7 +2,10 @@
 {{ collection:events as="event" query_scope="next_event" }}
   {{ if event }}
     {{ event }}
-      <div class="text-sm md:text-lg xl:text-xl border border-b border-black bg-white">
+      <a 
+        href="veranstaltungen/kommende-veranstaltungen"
+        title="Nächste Veranstaltung"
+        class="text-sm md:text-lg xl:text-xl border border-b border-black bg-white">
         <h2 class="text-sm md:text-lg xl:text-xl m-0 border-b border-black pt-6 xl:pt-8 pb-3 xl:pb-4 px-8 xl:px-10">Nächste Veranstaltung</h2>
         <div class="flex p-10">
           <div>&rightarrow;</div>
@@ -17,7 +20,7 @@
             {{ /if }}
           </div>
         </div>
-      </div>
+      </a>
     {{ /event }}
   {{ /if }}
 {{ /collection:events }}
