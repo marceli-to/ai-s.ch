@@ -6,9 +6,14 @@
       {{ /page_elements }}
     </div>
   </article>
-  <article class="md:col-span-6">
+  <article class="md:col-span-6 space-y-18 md:space-y-36 xl:space-y-64">
     {{ media }}
-      {{ partial:media/image }}
+      {{ if type == 'image' }}
+        {{ partial:media/image wrapperClass="!mb-0" }}
+      {{ /if }}
+      {{ if type == 'video' }}
+        {{ partial:media/video }}
+      {{ /if }}
     {{ /media }}
   </article>
 </section>
