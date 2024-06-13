@@ -1,7 +1,7 @@
 {{ if (current_uri | ends_with('kommende-veranstaltungen')) }}
   {{ collection:events as="events" query_scope="upcoming_events" }}
     {{ if no_results }}
-      <p>Es gibt keine vergangenen Veranstaltungen.</p>
+      <p>{{ global_text:no_upcoming_events }}</p>
     {{ /if }}
     {{ events }}
       {{ partial:components/events/card }}
@@ -12,7 +12,7 @@
 {{ if (current_uri | ends_with('vergangene-veranstaltungen')) }}
   {{ collection:events as="events" query_scope="archived_events" }}
     {{ if no_results }}
-      <p>Es gibt keine vergangenen Veranstaltungen.</p>
+      <p>{{ global_text:no_past_events }}</p>
     {{ /if }}
     {{ events }}
       {{ partial:components/events/card }}

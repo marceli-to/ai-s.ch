@@ -1,0 +1,32 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: no_upcoming_events
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Keine Veranstaltungen geplant'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: no_past_events
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Keine vergangenen Veranstaltungen'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
