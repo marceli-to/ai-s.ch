@@ -38,11 +38,10 @@ fields:
                 -
                   handle: caption
                   field:
-                    input_type: text
                     antlers: false
-                    type: text
+                    type: textarea
                     display: Legende
-                    icon: text
+                    icon: textarea
                     listable: hidden
                     instructions_position: above
                     visibility: visible
