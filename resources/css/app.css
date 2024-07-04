@@ -60,3 +60,7 @@ article.content ul li p {
   @apply col-span-6
 }
 
+/* Page specific styles */
+body.contact article.content a {
+  @apply text-black;
+}
