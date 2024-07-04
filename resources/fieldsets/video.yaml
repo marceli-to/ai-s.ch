@@ -15,3 +15,16 @@ fields:
       hide_display: false
       validate:
         - required
+  -
+    handle: caption
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Legende
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

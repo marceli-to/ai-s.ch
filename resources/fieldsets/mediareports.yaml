@@ -1,0 +1,70 @@
+title: Medienberichte
+fields:
+  -
+    handle: mediareport
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        mediareport:
+          display: Medienbericht
+          instructions: 'Medienbericht hinzufügen.'
+          icon: text-formatting-image-top
+          sets:
+            mediareport:
+              display: Medienbericht
+              instructions: 'Medienbericht hinzufügen'
+              icon: text-formatting-image-top
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Bild
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: caption
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Legende
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: uri
+                  field:
+                    container: assets
+                    type: link
+                    display: Link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Medienbericht
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

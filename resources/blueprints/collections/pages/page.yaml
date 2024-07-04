@@ -47,6 +47,13 @@ tabs:
                       fields:
                         -
                           import: teasers
+                    mediareports:
+                      display: Medienberichte
+                      instructions: 'Medienberichte hinzufügen.'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: mediareports
               type: replicator
               display: Inhalte
               icon: replicator
