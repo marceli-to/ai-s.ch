@@ -1,20 +1,19 @@
 {{ nav:main }}
   {{ if is_current || is_parent }}
-      {{ partial:components/header }}
-        <nav class="text-sm xl:text-2xl">
-          <ul class="grid grid-cols-12">
-            {{ if children }}
-              {{ cols =  12 / children | count }}
-              {{ children }}
-                {{ partial:menu/page/item class="span-{{ cols }}" }}
-              {{ /children }}
-            {{ else }}
-              {{ slot }}
-            {{ /if}}
-          </ul>
-        </nav>
-      {{ /partial:components/header }}
-    
+    {{ partial:components/header }}
+      <nav class="text-sm xl:text-2xl">
+        <ul class="grid grid-cols-12">
+          {{ if children }}
+            {{ cols =  12 / children | count }}
+            {{ children }}
+              {{ partial:menu/page/item class="span-{{ cols }}" }}
+            {{ /children }}
+          {{ else }}
+            {{ slot }}
+          {{ /if}}
+        </ul>
+      </nav>
+    {{ /partial:components/header }}
   {{ /if }}
 {{ /nav:main }}
 
