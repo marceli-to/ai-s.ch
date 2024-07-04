@@ -48,31 +48,10 @@
           href="{{ uri }}" 
           title="{{ caption }}" 
           class="hover:text-ruby group">
-          <figure class="mb-36 md:mb-72 xl:mb-128 last-of-type:mb-0 {{ wrapperClass }}">
-            <picture class="block">
-              <source media="(min-width: 1280px)" srcset="{{ glide:image preset='2xl-webp' }}" type="image/webp">
-              <source media="(min-width: 1024px)" srcset="{{ glide:image preset='xl-webp' }}" type="image/webp">
-              <source media="(min-width: 768px)" srcset="{{ glide:image preset='lg-webp' }}" type="image/webp">
-              <source srcset="{{ glide:image preset='md-webp' }}" type="image/webp">
-              <source media="(min-width: 1280px)" srcset="{{ glide:image preset='2xl' }}" type="image/jpeg">
-              <source media="(min-width: 1024px)" srcset="{{ glide:image preset='xl' }}" type="image/jpeg">
-              <source media="(min-width: 768px)" srcset="{{ glide:image preset='lg' }}" type="image/jpeg">
-              <img 
-                src="{{ glide:image preset='md' }}" 
-                alt="{{ image:alt }}" 
-                title="{{ image:alt }}" 
-                height="{{ image:height }}" 
-                width="{{ image:width }}"
-                class="block w-full h-auto {{ imageClass ?? '' }} group-hover:opacity-75 transition-opacity"
-                loading="lazy">
-            </picture>
-            <figcaption class="w-full pt-6 xl:pt-8 text-sm xl:text-md hyphens-auto group/hover:text-ruby transition-colors">
-              {{ caption }}
-            </figcaption>
-          </figure>
+          {{ partial:media/image-mediareport }}
         </a>
       {{ else }}
-        {{ partial:media/image }}
+        {{ partial:media/image-mediareport }}
       {{ /if }}
     </div>
 
