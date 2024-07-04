@@ -52,6 +52,7 @@ export default {
         'silver': '#ebebeb',
         'graphite': '#666666',
         'ash': '#b3b3b3',
+        'mustard': '#957D32',
       },
     },
 

@@ -8,13 +8,26 @@
         {{ partial:menu/item }}
       {{ /nav:main }}
     </ul>
-    <a 
-      href="https://mein.fairgate.ch/ai-s/register/ODM1MA==" 
-      target="_blank"
-      title="Mitglied werden"
-      class="menu-item border-b border-t border-black flex">
-      <span>&rightarrow;</span>
-      <span class="block pl-8">Mitglied werden</span>
-    </a>
+    <div class="px-18 md:px-0 md:mr-32 xl:mr-56">
+      <a 
+        href="https://mein.fairgate.ch/ai-s/register/ODM1MA==" 
+        target="_blank"
+        title="Mitglied werden"
+        class="menu-item border-b border-t border-black flex">
+        Mitglied werden
+        {{# <span>&rightarrow;</span>
+        <span class="block pl-8">Mitglied werden</span> #}}
+      </a>
+      <a 
+        href="/impressum"
+        class="menu-item border-b border-black flex">
+        Impressum
+      </a>
+      <a 
+        href="/datenschutz"
+        class="menu-item border-b border-black flex">
+        Datenschutz
+      </a>
+    </div>
   </div>
 </nav>

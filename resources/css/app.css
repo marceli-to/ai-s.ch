@@ -33,7 +33,7 @@ article.content ul {
 }
 
 article.content a {
-  @apply text-ruby no-underline hover:underline underline-offset-2 decoration-1
+  @apply text-mustard no-underline hover:underline underline-offset-2 decoration-1
 }
 
 article.content ul {
