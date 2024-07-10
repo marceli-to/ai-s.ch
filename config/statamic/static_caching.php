@@ -80,7 +80,21 @@ return [
         'class' => null,
 
         'rules' => [
-            //
+          'pages' => [
+            'urls' => [
+              '/*',
+            ]
+          ],
+          'events' => [
+            'urls' => [
+              '/*',
+            ]
+          ],
+          'inventory' => [
+            'urls' => [
+              '/*',
+            ]
+          ],
         ],
 
     ],
