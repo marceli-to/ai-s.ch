@@ -10,7 +10,7 @@
 {{ /if }}
 
 {{ if (current_uri | ends_with('vergangene-veranstaltungen')) }}
-  {{ collection:events as="events" query_scope="archived_events" }}
+  {{ collection:events as="events" query_scope="archived_events" sort="event_date:desc" }}
     {{ if no_results }}
       <p>{{ global_text:no_past_events }}</p>
     {{ /if }}
