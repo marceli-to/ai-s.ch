@@ -8,6 +8,7 @@
         {{ text }}
       </div>
     {{ /if }}
+
   {{ /content }}
 {{ /if }}
 
@@ -58,3 +59,19 @@
   {{ /mediareport }}
 </div>
 {{ /if }}
+
+{{ if type == 'partner' }}
+  <div class="grid grid-cols-12 gap-24 xl:gap-48 xl:gap-y-24 mt-24">
+    {{ partner }}
+        <a href="{{ link }}" target="_blank" class="text-xs xl:text-sm flex flex-col justify-start col-span-6 !text-black">
+          <span class="flex items-center aspect-[16/10] py-12 relative">
+            <img src="{{ logo }}" width="{{ logo:width }}" height="{{ logo:height }}" alt="{{ name }}" class="w-full h-full object-contain absolute">
+          </span>
+          <span class="mt-6">
+            {{ name }}
+          </span>
+        </a>
+    {{ /partner }}
+  </div>
+{{ /if }}
+

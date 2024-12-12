@@ -1,0 +1,28 @@
+title: Partners
+fields:
+  -
+    handle: partner
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          instructions: null
+          icon: null
+          sets:
+            partner:
+              display: Partner-Logo
+              instructions: 'Partner-Logo hinzufügen'
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: partner
+      type: replicator
+      display: Partner
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

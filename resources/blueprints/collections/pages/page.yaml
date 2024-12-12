@@ -54,9 +54,15 @@ tabs:
                       fields:
                         -
                           import: mediareports
+                    partner:
+                      display: Partner-Logos
+                      instructions: 'Partner-Logos hinzufügen'
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          import: partners
               type: replicator
               display: Inhalte
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -84,7 +90,6 @@ tabs:
               antlers: false
               type: text
               display: Title
-              icon: text
               instructions: 'Can be used as a replacement for the page title'
               listable: hidden
               instructions_position: below
@@ -97,7 +102,6 @@ tabs:
               antlers: false
               type: textarea
               display: Description
-              icon: textarea
               listable: hidden
               instructions_position: below
               visibility: visible
@@ -116,7 +120,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: Image
-              icon: assets
               listable: hidden
               instructions_position: below
               visibility: visible
@@ -143,7 +146,6 @@ tabs:
               cast_booleans: false
               type: select
               display: 'CSS Klasse'
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -162,7 +164,6 @@ tabs:
               blueprint: false
               type: template
               display: Layout
-              icon: template
               listable: hidden
               instructions_position: above
               visibility: visible

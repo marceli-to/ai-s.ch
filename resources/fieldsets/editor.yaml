@@ -32,7 +32,6 @@ fields:
       previews: true
       type: bard
       display: Content
-      icon: bard
       listable: hidden
       instructions_position: above
       visibility: visible
