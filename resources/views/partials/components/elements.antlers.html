@@ -61,9 +61,11 @@
 {{ /if }}
 
 {{ if type == 'partner' }}
-  <div class="grid grid-cols-12 gap-24 xl:gap-48 xl:gap-y-24 mt-24">
+<div class="pt-32 md:pt-46 xl:pt-42">
+  <h2>{{ intro_text | nl2br }}</h2>
+  <div class="grid grid-cols-12 gap-32 md:gap-48 xl:gap-64">
     {{ partner }}
-        <a href="{{ link }}" target="_blank" class="text-xs xl:text-sm flex flex-col justify-start col-span-6 !text-black">
+        <a href="{{ link }}" target="_blank" class="text-xs xl:text-sm flex flex-col justify-start col-span-6 md:col-span-4 xl:col-span-3 !text-black">
           <span class="flex items-center aspect-[16/10] py-12 relative">
             <img src="{{ logo }}" width="{{ logo:width }}" height="{{ logo:height }}" alt="{{ name }}" class="w-full h-full object-contain absolute">
           </span>
@@ -73,5 +75,6 @@
         </a>
     {{ /partner }}
   </div>
+</div>
 {{ /if }}
 

@@ -1,6 +1,17 @@
 title: Partners
 fields:
   -
+    handle: intro_text
+    field:
+      antlers: false
+      type: textarea
+      display: Einleitungstext
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
     handle: partner
     field:
       collapse: true
