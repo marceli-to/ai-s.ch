@@ -37,7 +37,11 @@ article.content a {
 }
 
 article.content ul {
-  @apply list-disc list-inside ml-4
+  @apply list-disc ml-16
+}
+
+article.content ul li {
+  @apply mb-16
 }
 
 article.content ul li p {
