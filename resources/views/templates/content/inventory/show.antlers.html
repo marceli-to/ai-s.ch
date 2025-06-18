@@ -1,25 +1,25 @@
 <script>
-  const active = window.location.hash === '#video' ? 'video' : window.location.hash === '#arbeiten' ? 'work' : 'bio';
+  const active = window.location.hash === '#video' ? 'video' : window.location.hash === '#werk' ? 'work' : 'bio';
 </script>
 <div x-data="{ active: active }">
   {{ partial:menu/page/wrapper }}
     <li class="col-span-12 md:col-span-4 flex justify-between items-center">
       {{ if bio_text || bio_media }}
         <a 
-          href="{{ url }}#biografie"
+          href="{{ url }}#werdegang"
           x-on:click="window.scrollTo(0,0); active = 'bio'"
           :class="{ 'text-ash': active !== 'bio' }"
-          title="Biografie">
-          Biografie
+          title="Werdegang">
+          Werdegang
         </a>
       {{ /if }}
       {{ if work_text || work_media }}
         <a 
-          href="{{ url }}#arbeiten"
+          href="{{ url }}#werk"
           x-on:click="window.scrollTo(0,0); active = 'work'"
           :class="{ 'text-ash': active !== 'work' }"
-          title="Arbeiten">
-          Arbeiten
+          title="Werk">
+          Werk
         </a>
       {{ /if }}
       {{ if video_text || video_media }}
