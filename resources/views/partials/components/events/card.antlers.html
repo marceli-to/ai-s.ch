@@ -2,9 +2,15 @@
   <div class="min-h-28 md:min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-8 md:pl-12">
     {{ title }}
   </div>
-  <div class="min-h-28 md:min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-8 md:pl-12">
-    {{ event_date | iso_format('dddd, DD.MM.YYYY') }}
-  </div>
+  {{ if event_periode_start && event_periode_end }}
+    <div class="min-h-28 md:min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-8 md:pl-12">
+      {{ event_periode_start | iso_format('dddd, DD.MM.YYYY') }} – {{ event_periode_end | iso_format('dddd, DD.MM.YYYY') }}
+    </div>
+  {{ else }}
+    <div class="min-h-28 md:min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-8 md:pl-12">
+      {{ event_date | iso_format('dddd, DD.MM.YYYY') }}
+    </div>
+  {{ /if }}
   <div class="min-h-28 md:min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-8 md:pl-12">
     {{ if (event_time_start && event_time_end) }}
       {{ event_time_start | format('H.i') }}&ndash;{{ event_time_end | format('H.i') }} Uhr, {{ location }}

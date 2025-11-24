@@ -5,6 +5,13 @@ import { resolve } from 'path';
 const path = require('path');
 
 export default defineConfig({
+  server: {
+    host: 'localhost',
+    cors: {
+      origin: 'https://ai-s.ch.test',
+      credentials: true,
+    },
+  },
   resolve: {
     alias: {
       '@' : path.resolve(__dirname, './resources/js/'),

@@ -16,7 +16,6 @@ tabs:
               time_seconds_enabled: false
               type: date
               display: Datum
-              icon: date
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -26,12 +25,49 @@ tabs:
                 - required
               format: Y-m-d
           -
+            handle: event_periode_start
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: 'Datum (Start)'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              format: Y-m-d
+              width: 50
+          -
+            handle: event_periode_end
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: 'Datum (Ende)'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              format: Y-m-d
+              width: 50
+          -
             handle: event_time_start
             field:
               seconds_enabled: false
               type: time
               display: Beginn
-              icon: time
               width: 50
               listable: hidden
               instructions_position: above
@@ -44,7 +80,6 @@ tabs:
               seconds_enabled: false
               type: time
               display: Ende
-              icon: time
               width: 50
               listable: hidden
               instructions_position: above
@@ -73,7 +108,6 @@ tabs:
               antlers: false
               type: text
               display: Ort
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -107,12 +141,12 @@ tabs:
               previews: true
               type: bard
               display: Text
-              icon: bard
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+              container: assets
   sidebar:
     display: Sidebar
     sections:
