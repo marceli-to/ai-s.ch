@@ -1,4 +1,8 @@
-default:
-  name: '{{ config:app:name }}'
+de:
+  name: Deutsch
   locale: de
   url: /
+fr:
+  name: Französisch
+  locale: fr
+  url: /fr

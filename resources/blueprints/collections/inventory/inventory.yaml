@@ -19,6 +19,7 @@ tabs:
           -
             handle: name
             field:
+              localizable: true
               input_type: text
               antlers: false
               type: text
@@ -34,6 +35,7 @@ tabs:
           -
             handle: firstname
             field:
+              localizable: true
               input_type: text
               antlers: false
               type: text
@@ -54,6 +56,7 @@ tabs:
           -
             handle: bio_text
             field:
+              localizable: true
               buttons:
                 - h2
                 - bold
@@ -88,6 +91,7 @@ tabs:
           -
             handle: bio_media
             field:
+              localizable: true
               collapse: false
               previews: true
               fullscreen: true
@@ -122,6 +126,7 @@ tabs:
           -
             handle: work_text
             field:
+              localizable: true
               buttons:
                 - h2
                 - bold
@@ -157,6 +162,7 @@ tabs:
           -
             handle: work_media
             field:
+              localizable: true
               collapse: false
               previews: true
               fullscreen: true
@@ -191,6 +197,7 @@ tabs:
           -
             handle: video_text
             field:
+              localizable: true
               buttons:
                 - h2
                 - bold
@@ -226,6 +233,7 @@ tabs:
           -
             handle: video_media
             field:
+              localizable: true
               collapse: false
               previews: true
               fullscreen: true
@@ -258,6 +266,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: false
               instructions_position: above

@@ -3,6 +3,7 @@ fields:
   -
     handle: media
     field:
+      localizable: true
       collapse: false
       previews: true
       fullscreen: true

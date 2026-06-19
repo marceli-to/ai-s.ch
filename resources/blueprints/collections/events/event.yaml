@@ -89,6 +89,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: true
               validate:
@@ -104,6 +105,7 @@ tabs:
           -
             handle: location
             field:
+              localizable: true
               input_type: text
               antlers: false
               type: text
@@ -116,6 +118,7 @@ tabs:
           -
             handle: text
             field:
+              localizable: true
               buttons:
                 - bold
                 - unorderedlist

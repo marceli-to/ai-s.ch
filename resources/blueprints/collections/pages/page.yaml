@@ -9,6 +9,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: true
               validate:
@@ -24,6 +25,7 @@ tabs:
           -
             handle: page_elements
             field:
+              localizable: true
               collapse: false
               previews: true
               fullscreen: true
@@ -86,6 +88,7 @@ tabs:
           -
             handle: open_graph_title
             field:
+              localizable: true
               input_type: text
               antlers: false
               type: text
@@ -99,6 +102,7 @@ tabs:
           -
             handle: open_graph_description
             field:
+              localizable: true
               antlers: false
               type: textarea
               display: Description
@@ -111,6 +115,7 @@ tabs:
           -
             handle: open_graph_image
             field:
+              localizable: true
               max_files: 1
               mode: list
               container: assets

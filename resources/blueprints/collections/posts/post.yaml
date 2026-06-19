@@ -7,6 +7,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: true
               validate:
