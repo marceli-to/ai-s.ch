@@ -8,22 +8,20 @@
         {{ partial:menu/item }}
       {{ /nav:main }}
       
-      {{ if language_handling_complete:activate_multi_language }}
-        <nav
-          class="inline-flex hidden" 
-          aria-label="Sprache wählen / Choisir la langue">
-          {{ locales current_first="false" }}
-            <li class="">
-              <a
-                href="{{ permalink }}"
-                title="{{ locale:locale }}"
-                class="uppercase menu-item w-auto !px-8 {{ if is_current }}text-black{{ else }}text-graphite hover:text-black{{ /if }}">
-                {{ locale:locale }}
-              </a>
-            </li>
-          {{ /locales }}
-        </nav>
-      {{ /if }}
+      <nav
+        class="inline-flex !hidden" 
+        aria-label="Sprache wählen / Choisir la langue">
+        {{ locales current_first="false" }}
+          <li class="">
+            <a
+              href="{{ permalink }}"
+              title="{{ locale:locale }}"
+              class="uppercase menu-item w-auto !px-8 {{ if is_current }}text-black{{ else }}text-graphite hover:text-black{{ /if }}">
+              {{ locale:locale }}
+            </a>
+          </li>
+        {{ /locales }}
+      </nav>
 
     </ul>
     <div class="px-18 md:px-0 md:mr-32 xl:mr-56">
