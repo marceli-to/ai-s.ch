@@ -7,23 +7,22 @@
       {{ nav:main }}
         {{ partial:menu/item }}
       {{ /nav:main }}
-
-      {{# Language switcher — loops every configured site (DE / FR). Active state mirrors menu/item. #}}
-      <li class="flex items-center leading-none mt-8 ml-4">
+      
+      {{ if language_handling_complete:activate_multi_language }}
         <nav class="inline-flex" aria-label="Sprache wählen / Choisir la langue">
-          {{ locales all="true" current_first="false" }}
-            <a
-              href="{{ permalink }}"
-              lang="{{ locale:short }}"
-              hreflang="{{ locale:short }}"
-              title="{{ if locale:short == 'de' }}Deutsch{{ else }}Français{{ /if }}"
-              {{ if is_current }}aria-current="true"{{ /if }}
-              class="menu-item w-auto !px-8 {{ is_current ? 'text-black' : 'text-graphite hover:text-black' }}">
-              {{ locale:short | upper }}
-            </a>
+          {{ locales current_first="false" }}
+            <li class="">
+              <a
+                href="{{ permalink }}"
+                title="{{ locale:locale }}"
+                class="uppercase menu-item w-auto !px-8 {{ if is_current }}text-black{{ else }}text-graphite hover:text-black{{ /if }}">
+                {{ locale:locale }}
+              </a>
+            </li>
           {{ /locales }}
         </nav>
-      </li>
+      {{ /if }}
+
     </ul>
     <div class="px-18 md:px-0 md:mr-32 xl:mr-56">
       <a 

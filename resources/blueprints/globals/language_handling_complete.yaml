@@ -1,0 +1,12 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: activate_multi_language
+            field:
+              type: toggle
+              display: 'Sprachwahl aktivieren'
+              localizable: false

@@ -9,42 +9,30 @@ tabs:
           -
             handle: title
             field:
-              localizable: true
               type: text
               required: true
+              localizable: true
               validate:
                 - required
               display: Titel
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              input_type: text
-              antlers: false
-              hide_display: false
           -
             handle: page_elements
             field:
               localizable: true
-              collapse: false
-              previews: true
-              fullscreen: true
+              type: replicator
+              display: Inhalte
               sets:
                 content:
                   display: Inhalte
-                  instructions: null
-                  icon: null
                   sets:
                     editor:
                       display: Editor
-                      instructions: null
                       icon: text-formatting-markdown
                       fields:
                         -
                           import: editor
                     teasers:
                       display: Teasers
-                      instructions: null
                       icon: media-image-picture-gallery
                       fields:
                         -
@@ -63,13 +51,6 @@ tabs:
                       fields:
                         -
                           import: partners
-              type: replicator
-              display: Inhalte
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
   media:
     display: Medien
     sections:
@@ -89,47 +70,27 @@ tabs:
             handle: open_graph_title
             field:
               localizable: true
-              input_type: text
-              antlers: false
               type: text
               display: Title
               instructions: 'Can be used as a replacement for the page title'
-              listable: hidden
               instructions_position: below
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: open_graph_description
             field:
               localizable: true
-              antlers: false
               type: textarea
               display: Description
-              listable: hidden
               instructions_position: below
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               instructions: 'One or two descriptive sentences about the content of the page.'
           -
             handle: open_graph_image
             field:
               localizable: true
               max_files: 1
-              mode: list
               container: assets
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
               type: assets
               display: Image
-              listable: hidden
               instructions_position: below
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               folder: images
               instructions: 'Image used for sharing on social media.'
   settings:
@@ -143,19 +104,9 @@ tabs:
             field:
               options:
                 contact: Kontakt
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
-              searchable: true
-              cast_booleans: false
               type: select
               display: 'CSS Klasse'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              localizable: false
           -
             handle: template
             field:
@@ -165,15 +116,9 @@ tabs:
           -
             handle: layout
             field:
-              hide_partials: true
-              blueprint: false
               type: template
               display: Layout
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              localizable: false
   sidebar:
     display: Sidebar
     sections:
@@ -185,6 +130,7 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+              show_regenerate: true
           -
             handle: parent
             field:

@@ -115,6 +115,36 @@ everything else falls through to the DE origin.
 folder plus `sites: [de, fr]` in the config. Create FR localizations later as needed,
 same `origin:`/`published: false` pattern.
 
+**FR page titles + slugs (translated).** The 16 FR page localizations have French
+`title`s and `slug`s (only titles were translated — bodies still inherit DE). Replay
+this mapping after re-creating the localizations (keyed by DE slug). `ai-s` (home) is
+the brand/root page and is left untranslated. Two DE pages share the title
+"Veranstaltungen"; since all FR entries share one flat folder, slugs must stay unique,
+so "upcoming" is disambiguated as `evenements-a-venir`.
+
+| DE slug | FR title | FR slug |
+|---------|----------|---------|
+| `archiv` | Archives | `archives` |
+| `ueber-das-archiv` | À propos des archives | `a-propos-des-archives` |
+| `ihr-besuch` | Visite et demandes | `visite-et-demandes` |
+| `veranstaltungen` | Événements | `evenements` |
+| `kommende-veranstaltungen` | Événements à venir | `evenements-a-venir` |
+| `vergangene-veranstaltungen` | Événements passés | `evenements-passes` |
+| `kontakt` | Contact | `contact` |
+| `sekretariat` | Secrétariat et direction | `secretariat-et-direction` |
+| `vorstand` | Comité | `comite` |
+| `einblicke-bestaende` | Aperçu des fonds | `apercu-des-fonds` |
+| `online-katalog` | Catalogue en ligne | `catalogue-en-ligne` |
+| `medienberichte` | Revue de presse | `revue-de-presse` |
+| `partnerschaft` | Partenariats | `partenariats` |
+| `impressum` | Mentions légales | `mentions-legales` |
+| `datenschutzerklaerung` | Politique de confidentialité | `politique-de-confidentialite` |
+
+After renaming FR slugs, the FR nav (`content/trees/navigation/fr/main.yaml`) manual
+`url:` link-nodes must be repointed to the new slugs (Archives → `/fr/archives/a-propos-des-archives`,
+Événements → `/fr/evenements/evenements-a-venir`, Contact → `/fr/contact/secretariat-et-direction`),
+and their German `title:` labels translated to match.
+
 ### 2d. Globals — per-site split
 
 ```
