@@ -9,7 +9,10 @@
       {{ /nav:main }}
       
       {{ if language_handling_complete:activate_multi_language }}
-        <nav class="inline-flex" aria-label="Sprache wählen / Choisir la langue">
+      {{ language_handling_complete:activate_multi_language | dump }}
+        <nav
+          class="inline-flex hidden" 
+          aria-label="Sprache wählen / Choisir la langue">
           {{ locales current_first="false" }}
             <li class="">
               <a
