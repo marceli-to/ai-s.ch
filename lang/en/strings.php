@@ -8,8 +8,10 @@ return [
     'time_from' => 'from :time',
     'time_until' => 'until :time',
 
-    'site_name' => 'Swiss Interior Architecture Archive ai-s',
-    'site_name_stacked' => 'Swiss Interior<br>Architecture<br>Archive ai-s',
+    'site_name' => 'Swiss Interior Architecture Archive',
+
+    'homepage_heading' => 'Swiss Interior Architecture Archive ai-s',
+    'homepage_heading_stacked' => 'Swiss Interior<br>Architecture<br>Archive ai-s',
     'homepage' => 'Homepage',
 
     'become_member' => 'Become a Member',
