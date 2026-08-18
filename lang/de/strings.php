@@ -14,6 +14,14 @@ return [
     'time_from' => 'ab :time Uhr',
     'time_until' => 'bis :time Uhr',
 
+    // Menü-Fuss (im Template, nicht im CP pflegbar).
+    'become_member' => 'Mitglied werden',
+    'legal_notice' => 'Impressum',
+    'legal_notice_url' => '/impressum',
+    'privacy_policy' => 'Datenschutz',
+    'privacy_policy_url' => '/datenschutzerklaerung',
+    'choose_language' => 'Sprache wählen',
+
     // Untermenü auf der Bestände-Detailseite.
     'biography' => 'Werdegang',
     'work' => 'Werk',

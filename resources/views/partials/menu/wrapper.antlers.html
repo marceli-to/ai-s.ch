@@ -12,25 +12,25 @@
       <a 
         href="https://mein.fairgate.ch/ai-s/register/ODM1MA==" 
         target="_blank"
-        title="Mitglied werden"
+        title="{{ trans:strings.become_member }}"
         class="menu-item border-b border-t border-black flex">
-        Mitglied werden
+        {{ trans:strings.become_member }}
         {{# <span>&rightarrow;</span>
         <span class="block pl-8">Mitglied werden</span> #}}
       </a>
       <a 
-        href="/impressum"
+        href="{{ trans:strings.legal_notice_url }}"
         class="menu-item border-b border-black flex">
-        Impressum
+        {{ trans:strings.legal_notice }}
       </a>
       <a 
-        href="/datenschutzerklaerung"
+        href="{{ trans:strings.privacy_policy_url }}"
         class="menu-item border-b border-black flex">
-        Datenschutz
+        {{ trans:strings.privacy_policy }}
       </a>
       <nav
         class="inline-flex md:ml-4" 
-        aria-label="Sprache wählen / Choisir la langue">
+        aria-label="{{ trans:strings.choose_language }}">
         {{ locales current_first="false" }}
           <li class="block">
             <a

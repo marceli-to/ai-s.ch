@@ -8,6 +8,13 @@ return [
     'time_from' => 'dès :time h',
     'time_until' => 'jusqu’à :time h',
 
+    'become_member' => 'Devenir membre',
+    'legal_notice' => 'Mentions légales',
+    'legal_notice_url' => '/fr/mentions-legales',
+    'privacy_policy' => 'Politique de confidentialité',
+    'privacy_policy_url' => '/fr/politique-de-confidentialite',
+    'choose_language' => 'Choisir la langue',
+
     'biography' => 'Biographie',
     'work' => 'Œuvre',
 

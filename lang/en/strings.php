@@ -8,6 +8,13 @@ return [
     'time_from' => 'from :time',
     'time_until' => 'until :time',
 
+    'become_member' => 'Become a Member',
+    'legal_notice' => 'Legal Notice',
+    'legal_notice_url' => '/en/impressum',
+    'privacy_policy' => 'Privacy Policy',
+    'privacy_policy_url' => '/en/datenschutzerklaerung',
+    'choose_language' => 'Choose language',
+
     'biography' => 'Biography',
     'work' => 'Work',
 
