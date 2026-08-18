@@ -1,22 +1,21 @@
-
 {{ collection:events as="event" query_scope="next_event" }}
   {{ if event }}
     {{ event }}
       <a 
-        href="veranstaltungen/kommende-veranstaltungen"
-        title="Nächste Veranstaltung"
+        href="{{ trans:strings.upcoming_events_url }}"
+        title="{{ trans:strings.next_event }}"
         class="text-sm md:text-lg xl:text-xl border border-b border-black bg-white">
-        <h2 class="text-sm md:text-lg xl:text-xl m-0 border-b border-black pt-6 xl:pt-8 pb-3 xl:pb-4 px-8 xl:px-10">Nächste Veranstaltung</h2>
+        <h2 class="text-sm md:text-lg xl:text-xl m-0 border-b border-black pt-6 xl:pt-8 pb-3 xl:pb-4 px-8 xl:px-10">{{ trans:strings.next_event }}</h2>
         <div class="flex p-10">
           <div>&rightarrow;</div>
           <div class="pl-6 pr-10 xl:pl-8 xl:pr-16 leading-[1.2]">
             {{ title }}<br>
             {{ if (event_time_start && event_time_end) }}
-              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ event_time_start | format('H.i') }}&ndash;{{ event_time_end | format('H.i') }} Uhr
+              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ trans:strings.time_range start="{ event_time_start | format('H.i') }" end="{ event_time_end | format('H.i') }" }}
             {{ elseif (event_time_start && !event_time_end) }}
-              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, ab {{ event_time_start | format('H.i') }} Uhr
+              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ trans:strings.time_from time="{ event_time_start | format('H.i') }" }}
             {{ elseif (!event_time_start && event_time_end) }}
-              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, bis {{ event_time_end | format('H.i') }} Uhr
+              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ trans:strings.time_until time="{ event_time_end | format('H.i') }" }}
             {{ /if }}
           </div>
         </div>

@@ -13,11 +13,11 @@
   {{ /if }}
   <div class="min-h-28 md:min-h-36 xl:min-h-44 w-full flex items-center border-b border-black pl-8 md:pl-12">
     {{ if (event_time_start && event_time_end) }}
-      {{ event_time_start | format('H.i') }}&ndash;{{ event_time_end | format('H.i') }} Uhr, {{ location }}
+      {{ trans:strings.time_range start="{ event_time_start | format('H.i') }" end="{ event_time_end | format('H.i') }" }}, {{ location }}
     {{ elseif (event_time_start && !event_time_end) }}
-      ab {{ event_time_start | format('H.i') }} Uhr, {{ location }}
+      {{ trans:strings.time_from time="{ event_time_start | format('H.i') }" }}, {{ location }}
     {{ elseif (!event_time_start && event_time_end) }}
-      bis {{ event_time_end | format('H.i') }} Uhr, {{ location }}
+      {{ trans:strings.time_until time="{ event_time_end | format('H.i') }" }}, {{ location }}
     {{ /if }}
   </div>
   <div class="p-8 md:p-12 text-sm xl:text-md hyphens-auto">

@@ -1,4 +1,4 @@
-{{ if (current_uri | ends_with('kommende-veranstaltungen')) }}
+{{ if slug == "{trans:strings.upcoming_events_slug}" }}
   {{ collection:events as="events" query_scope="upcoming_events" }}
     {{ if no_results }}
       <p class="px-8 md:px-12">{{ global_text:no_upcoming_events }}</p>
@@ -9,7 +9,7 @@
   {{ /collection:events }}
 {{ /if }}
 
-{{ if (current_uri | ends_with('vergangene-veranstaltungen')) }}
+{{ if slug == "{trans:strings.past_events_slug}" }}
   {{ collection:events as="archived_events" query_scope="archived_events" sort="event_date:desc" }}
     {{ if no_results }}
       <p>{{ global_text:no_past_events }}</p>
