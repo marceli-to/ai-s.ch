@@ -1,4 +1,4 @@
-{{ collection:events as="event" query_scope="next_event" }}
+{{ collection:events as="event" query_scope="next_event" sort="event_date:asc" }}
   {{ if event }}
     {{ event }}
       <a 

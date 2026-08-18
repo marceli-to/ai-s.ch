@@ -1,5 +1,5 @@
 {{ if slug == "{trans:strings.upcoming_events_slug}" }}
-  {{ collection:events as="events" query_scope="upcoming_events" }}
+  {{ collection:events as="events" query_scope="upcoming_events" sort="event_date:asc" }}
     {{ if no_results }}
       <p class="px-8 md:px-12">{{ global_text:no_upcoming_events }}</p>
     {{ /if }}
