@@ -4,7 +4,7 @@
       <div class="flex w-full max-w-[558px]">
         <a 
           href="/" 
-          title="Homepage | Archiv Innenarchitektur Schweiz" 
+          title="{{ trans:strings.homepage }} | {{ trans:strings.site_name }}" 
           class="menu-item bg-lemon">
           ai-s
         </a>
@@ -23,7 +23,7 @@
       </div>
     </div>
     {{ if is_homepage }}
-      <h1 class="pl-8 md:pl-12 pt-32 text-sm leading-6">Archiv<br>Innenarchitektur<br>Schweiz</h1>
+      <h1 class="pl-8 md:pl-12 pt-32 text-sm leading-6">{{ trans:strings.site_name_stacked }}</h1>
     {{ else }}
       <h1 class="menu-item bg-lemon">{{ title }}</h1>
     {{ endif }}
@@ -31,7 +31,7 @@
 {{ else }}
   {{ partial:components/header class="hidden md:block" }}
     {{ if is_homepage }}
-        <h1>Archiv Innenarchitektur Schweiz</h1>
+        <h1>{{ trans:strings.site_name }}</h1>
       {{ else }}
         <h1>{{ title }}</h1>
       {{ endif }}

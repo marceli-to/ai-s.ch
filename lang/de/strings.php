@@ -14,6 +14,11 @@ return [
     'time_from' => 'ab :time Uhr',
     'time_until' => 'bis :time Uhr',
 
+    // Site-Name; …_stacked steht mit Zeilenumbrüchen im mobilen Header.
+    'site_name' => 'Archiv Innenarchitektur Schweiz ai-s',
+    'site_name_stacked' => 'Archiv<br>Innenarchitektur<br>Schweiz ai-s',
+    'homepage' => 'Homepage',
+
     // Menü-Fuss (im Template, nicht im CP pflegbar).
     'become_member' => 'Mitglied werden',
     'legal_notice' => 'Impressum',

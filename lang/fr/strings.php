@@ -8,6 +8,10 @@ return [
     'time_from' => 'dès :time h',
     'time_until' => 'jusqu’à :time h',
 
+    'site_name' => 'Archives suisses de l’architecture d’intérieur ai-s',
+    'site_name_stacked' => 'Archives suisses de<br>l’architecture<br>d’intérieur ai-s',
+    'homepage' => 'Page d’accueil',
+
     'become_member' => 'Devenir membre',
     'legal_notice' => 'Mentions légales',
     'legal_notice_url' => '/fr/mentions-legales',
