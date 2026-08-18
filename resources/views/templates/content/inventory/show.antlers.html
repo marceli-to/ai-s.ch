@@ -9,8 +9,8 @@
           href="{{ url }}#werdegang"
           x-on:click="window.scrollTo(0,0); active = 'bio'"
           :class="{ 'text-ash': active !== 'bio' }"
-          title="Werdegang">
-          Werdegang
+          title="{{ trans:strings.biography }}">
+          {{ trans:strings.biography }}
         </a>
       {{ /if }}
       {{ if work_text || work_media }}
@@ -18,8 +18,8 @@
           href="{{ url }}#werk"
           x-on:click="window.scrollTo(0,0); active = 'work'"
           :class="{ 'text-ash': active !== 'work' }"
-          title="Werk">
-          Werk
+          title="{{ trans:strings.work }}">
+          {{ trans:strings.work }}
         </a>
       {{ /if }}
       {{ if video_text || video_media }}
@@ -33,7 +33,7 @@
       {{ /if }}
     </li>
     <li class="hidden md:col-span-8 md:flex justify-end pr-12">
-      <a href="/einblicke-bestaende" title="Einblicke Bestände" class="uppercase text-ash">
+      <a href="{{ trans:strings.inventory_url }}" title="{{ trans:strings.inventory_title }}" class="uppercase text-ash">
         A-Z
       </a>
     </li>

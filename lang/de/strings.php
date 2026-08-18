@@ -14,6 +14,14 @@ return [
     'time_from' => 'ab :time Uhr',
     'time_until' => 'bis :time Uhr',
 
+    // Untermenü auf der Bestände-Detailseite.
+    'biography' => 'Werdegang',
+    'work' => 'Werk',
+
+    // Titel und URL der Bestände-Übersicht dieser Site.
+    'inventory_title' => 'Einblicke Bestände',
+    'inventory_url' => '/einblicke-bestaende',
+
     // Slug bzw. URL der Veranstaltungs-Seiten dieser Site.
     'upcoming_events_slug' => 'kommende-veranstaltungen',
     'upcoming_events_url' => '/veranstaltungen/kommende-veranstaltungen',
