@@ -270,7 +270,7 @@ tabs:
               type: text
               required: false
               instructions_position: above
-              listable: hidden
+              listable: true
               visibility: visible
               replicator_preview: true
               input_type: text

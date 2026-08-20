@@ -96,7 +96,7 @@ tabs:
                 - required
               display: Titel
               instructions_position: above
-              listable: hidden
+              listable: true
               visibility: visible
               replicator_preview: true
               input_type: text

@@ -15,9 +15,9 @@ return [
     'homepage' => 'Homepage',
 
     'become_member' => 'Become a Member',
-    'legal_notice' => 'Legal Notice',
+    'legal_notice' => 'Imprint',
     'legal_notice_url' => '/en/impressum',
-    'privacy_policy' => 'Privacy Policy',
+    'privacy_policy' => 'Data protection',
     'privacy_policy_url' => '/en/datenschutzerklaerung',
     'choose_language' => 'Choose language',
 
