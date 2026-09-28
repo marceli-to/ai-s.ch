@@ -10,12 +10,15 @@
           <div>&rightarrow;</div>
           <div class="pl-6 pr-10 xl:pl-8 xl:pr-16 leading-[1.2]">
             {{ title }}<br>
+            {{ if event_periode_start && event_periode_end }}
+              {{ event_periode_start | iso_format('dddd, DD.MM.YYYY') }} – {{ event_periode_end | iso_format('dddd, DD.MM.YYYY') }}<br>
+            {{ /if }}
             {{ if (event_time_start && event_time_end) }}
-              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ trans:strings.time_range start="{ event_time_start | format('H.i') }" end="{ event_time_end | format('H.i') }" }}
+              {{ if !(event_periode_start && event_periode_end) }}{{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ /if }}{{ trans:strings.time_range start="{ event_time_start | format('H.i') }" end="{ event_time_end | format('H.i') }" }}
             {{ elseif (event_time_start && !event_time_end) }}
-              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ trans:strings.time_from time="{ event_time_start | format('H.i') }" }}
+              {{ if !(event_periode_start && event_periode_end) }}{{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ /if }}{{ trans:strings.time_from time="{ event_time_start | format('H.i') }" }}
             {{ elseif (!event_time_start && event_time_end) }}
-              {{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ trans:strings.time_until time="{ event_time_end | format('H.i') }" }}
+              {{ if !(event_periode_start && event_periode_end) }}{{ event_date | iso_format('dddd, DD.MM.YYYY') }}, {{ /if }}{{ trans:strings.time_until time="{ event_time_end | format('H.i') }" }}
             {{ /if }}
           </div>
         </div>

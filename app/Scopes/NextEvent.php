@@ -13,6 +13,7 @@ class NextEvent extends Scope
    */
   public function apply($query, $values)
   {
-    $query->where('event_date', '>=', now())->orderBy('event_date', 'asc')->limit(1);
+    (new UpcomingEvents)->apply($query, $values);
+    $query->orderBy('event_date', 'asc')->limit(1);
   }
 }
