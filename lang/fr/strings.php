@@ -8,10 +8,10 @@ return [
     'time_from' => 'dès :time h',
     'time_until' => 'jusqu’à :time h',
 
-    'site_name' => 'Archives suisses de l’architecture d’intérieur',
+    'site_name' => 'Archives d’architecture d’intérieur Suisse',
 
-    'homepage_heading' => 'Archives suisses de l’architecture d’intérieur ai-s',
-    'homepage_heading_stacked' => 'Archives suisses de<br>l’architecture<br>d’intérieur ai-s',
+    'homepage_heading' => 'Archives d’architecture d’intérieur Suisse ai-s',
+    'homepage_heading_stacked' => 'Archives d’architecture<br>d’intérieur<br>Suisse ai-s',
     'homepage' => 'Page d’accueil',
 
     'become_member' => 'Devenir membre',
