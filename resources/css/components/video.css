@@ -9,3 +9,18 @@
 .video-wrapper iframe {
   @apply w-full h-full object-contain
 }
+
+.video-facade {
+  @apply block w-full h-full p-0 border-0 cursor-pointer bg-black bg-center bg-cover bg-no-repeat;
+}
+
+.video-facade::after {
+  content: "";
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[68px] h-[48px] rounded-xl transition-colors;
+  background: #f00 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23fff'/%3E%3C/svg%3E") center / 28px no-repeat;
+}
+
+.video-facade:hover::after,
+.video-facade:focus-visible::after {
+  background-color: #c00;
+}

@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-bdc9a00f.css",
+    "file": "assets/app-0c68ab47.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -13,7 +13,7 @@
     "src": "resources/css/fonts/GreyLLWeb-Book.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-154cb3de.js",
+    "file": "assets/app-3ffe69ab.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
