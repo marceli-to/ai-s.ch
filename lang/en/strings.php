@@ -25,7 +25,7 @@ return [
     'work' => 'Work',
 
     'inventory_title' => 'Collections',
-    'inventory_url' => '/en/einblicke-bestaende',
+    'inventory_url' => '/en/collections',
 
     'upcoming_events_slug' => 'upcoming-events',
     'upcoming_events_url' => '/en/events/upcoming-events',
